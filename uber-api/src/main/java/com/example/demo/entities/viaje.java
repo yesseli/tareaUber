@@ -15,24 +15,39 @@ public class viaje {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
 private Long id;
-@Column (name= "cliente")
-private Long cliente;
 	
+	
+	@Column (name= "id_Cliente")
+	private Long id_Cliente;
+	@Column (name="id_Piloto")
+	private Long id_Piloto;
 	@Column (name ="origen")
 	private String origen;
 	@Column (name= "destino")
 	private String destino;
 	@Column (name= "estado")
 	private String estado;
+	@Column (name= "monto")
+	private int monto;
 	
-	
-	
-	
-	public Long getCliente() {
-		return cliente;
+
+	public Long getId_Cliente() {
+		return id_Cliente;
 	}
-	public void setCliente(Long cliente) {
-		this.cliente = cliente;
+	public void setId_Cliente(Long id_Cliente) {
+		this.id_Cliente = id_Cliente;
+	}
+	public Long getId_Piloto() {
+		return id_Piloto;
+	}
+	public void setId_Piloto(Long id_Piloto) {
+		this.id_Piloto = id_Piloto;
+	}
+	public int getMonto() {
+		return monto;
+	}
+	public void setMonto(int monto) {
+		this.monto = monto;
 	}
 	public Long getId() {
 		return id;

@@ -68,10 +68,12 @@ public class viajeController {
 		if (modViaje.isPresent()) {
 			viaje actual = modViaje.get();
 			actual.setId(viajes.getId());
-			actual.setCliente(viajes.getCliente());
+			actual.setId_Cliente(viajes.getId_Cliente());
+			actual.setId_Piloto(viajes.getId_Piloto());
 			actual.setOrigen(viajes.getOrigen());
 			actual.setDestino(viajes.getDestino());
 			actual.setEstado(viajes.getEstado());
+			actual.setMonto(viajes.getMonto());
 
 			viaje modificado = repository.save(actual);
 
